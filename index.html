@@ -92,41 +92,9 @@ video {
     <a href="https://maps.app.goo.gl/cbUhYL1ePUQ2rrRF7" target="_blank"></a>
   </div>
 
-  <!-- Vídeo desktop -->
-  <video id="meuVideoDesktop" height="100%" autoplay loop muted>
-    <source src="UpscaleVideo_2_20240505.mp4" type="video/mp4">
-    Seu navegador não suporta a reprodução de vídeos.
-  </video>
-
-  <!-- Vídeo mobile -->
-  <video id="meuVideoMobile" height="100%" autoplay loop muted style="display: none;">
-    <source src="lv_0_20240505182444.mp4" type="video/mp4">
-    Seu navegador não suporta a reprodução de vídeos.
-  </video>
+  <!-- GIF -->
+  <img src="UpscaleVideo_2_20240505.gif" alt="GIF" height="100%">
 </div>
-
-<script>
-// Função para verificar o tamanho da tela e alternar entre os vídeos desktop e mobile
-function alternarVideo() {
-    var videoDesktop = document.getElementById("meuVideoDesktop");
-    var videoMobile = document.getElementById("meuVideoMobile");
-
-    if (window.innerWidth <= 768) {
-        // Exibir vídeo mobile e ocultar vídeo desktop em telas menores que 768px
-        videoDesktop.style.display = "none";
-        videoMobile.style.display = "block";
-    } else {
-        // Exibir vídeo desktop e ocultar vídeo mobile em telas maiores que 768px
-        videoDesktop.style.display = "block";
-        videoMobile.style.display = "none";
-    }
-}
-
-// Chama a função ao carregar a página e sempre que a janela for redimensionada
-window.onload = alternarVideo;
-window.onresize = alternarVideo;
-
-</script>
 
 </body>
 </html>
