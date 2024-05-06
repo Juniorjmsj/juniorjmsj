@@ -67,27 +67,6 @@ video {
   height: 100%;
 }
 
-#play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#play-button img {
-  width: 70%;
-  height: auto;
-}
-
 @media (max-width: 768px) {
   #meuVideoDesktop {
     display: none; /* Oculta o vídeo desktop em telas menores */
@@ -114,21 +93,16 @@ video {
   </div>
 
   <!-- Vídeo desktop -->
-  <video id="meuVideoDesktop" height="100%" loop muted controls>
+  <video id="meuVideoDesktop" height="100%" autoplay loop muted>
     <source src="UpscaleVideo_2_20240505.mp4" type="video/mp4">
     Seu navegador não suporta a reprodução de vídeos.
   </video>
 
   <!-- Vídeo mobile -->
-  <video id="meuVideoMobile" height="100%" loop muted controls style="display: none;">
+  <video id="meuVideoMobile" height="100%" autoplay loop muted style="display: none;">
     <source src="lv_0_20240505182444.mp4" type="video/mp4">
     Seu navegador não suporta a reprodução de vídeos.
   </video>
-
-  <!-- Botão de reprodução -->
-  <button id="play-button">
-    <img src="play-button.png" alt="Reproduzir">
-  </button>
 </div>
 
 <script>
@@ -136,18 +110,15 @@ video {
 function alternarVideo() {
     var videoDesktop = document.getElementById("meuVideoDesktop");
     var videoMobile = document.getElementById("meuVideoMobile");
-    var playButton = document.getElementById("play-button");
 
     if (window.innerWidth <= 768) {
         // Exibir vídeo mobile e ocultar vídeo desktop em telas menores que 768px
         videoDesktop.style.display = "none";
         videoMobile.style.display = "block";
-        playButton.style.display = "none"; // Oculta o botão de reprodução em telas menores
     } else {
         // Exibir vídeo desktop e ocultar vídeo mobile em telas maiores que 768px
         videoDesktop.style.display = "block";
         videoMobile.style.display = "none";
-        playButton.style.display = "none"; // Oculta o botão de reprodução em telas maiores
     }
 }
 
@@ -155,11 +126,9 @@ function alternarVideo() {
 window.onload = alternarVideo;
 window.onresize = alternarVideo;
 
-// Adiciona evento de clique ao botão de reprodução para iniciar o vídeo mobile
-document.getElementById("play-button").addEventListener("click", function() {
-    document.getElementById("meuVideoMobile").play();
-});
 </script>
 
 </body>
 </html>
+
+
