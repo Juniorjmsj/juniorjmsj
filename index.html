@@ -7,13 +7,25 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Chá de bebê do Ravi" />
-<title>Cha de bebe do Ravi</title>
+<title>Cha de bebe Ravi</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
   html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #E6F7FB;
+}
+#conteiner{
+  height: 100vh;
+  margin: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 
 video {
@@ -27,16 +39,16 @@ video {
 }
 
 #square {
-    background-color: transparent;
-    display: flex;
-    position: absolute;
-    height: 500px;
-    width: 100%;
-    border: solid 1px transparent;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+  display: flex;
+  background-color: transparent;
+  height: 450px;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px transparent;
+  z-index: 1;
 }
 
 #square:hover {
@@ -50,19 +62,21 @@ video {
 }
 #presente{
   display: flex;
-  height: 100%;
+  height: calc(100% - 10px);
   width: 100%;
   justify-content: center;
-  flex-direction: stretch;
 }
 button {
-    background-color: #918377;
+    background-color: #104A52;
     color: #fff;
-    padding: 10px;
-    border: 1px solid #77C4D1;
+    padding: 5px;
+    border: 3px solid #2D727D;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), /* Sombra interna */
+        2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombra externa */
     border-radius: 8px;
+    font-family: "M PLUS 1p", sans-serif;
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: large;
     cursor: pointer;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -71,11 +85,11 @@ button {
     margin-left: 5px;
     transition: background-color 0.3s;
     width: calc(100% - 30px);
-    height: 100%;
+    height: 90%;
   }
   
   button:hover {
-    background-color: #FDBF79;
+    background-color: #589DA7;
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
@@ -87,20 +101,19 @@ button {
 </head>
 <body>
 
-
-      <div id="square">
-        <a href="https://maps.app.goo.gl/cbUhYL1ePUQ2rrRF7" target="_blank"></a>
-      </div>
-
-      <div>
-        <video autoplay loop muted>
-          <source src="Convite aniversário infantil safari colorido ilustração verde marrom.mp4" type="video/mp4">Seu navegador não suporta a reprodução de vídeos.
-        </video>
-      </div>
-
-      <div id="presente">
-        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdxWuXwaKMu5gKdLbyQwxQKv-1XqoVl3Kmt8CY8cpmbYati9A/viewform?usp=sf_link', '_blank')">CLIQUE AQUI PARA CONFIRMAR PRESENÇA!</button>
-      </div>
+  <div id="conteiner">
+        <div id="square">
+          <a href="https://maps.app.goo.gl/cbUhYL1ePUQ2rrRF7" target="_blank"></a>
+        </div>
+        <div>
+          <video autoplay muted>
+            <source src="Convite aniversário infantil safari colorido ilustração verde marrom.mp4" type="video/mp4">Seu navegador não suporta a reprodução de vídeos.
+          </video>
+        </div>
+        <div id="presente">
+          <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdxWuXwaKMu5gKdLbyQwxQKv-1XqoVl3Kmt8CY8cpmbYati9A/viewform?usp=sf_link', '_blank')">CLIQUE AQUI PARA CONFIRMAR PRESENÇA!</button>
+        </div>
+  </div>
 
 </body>
 </html>
