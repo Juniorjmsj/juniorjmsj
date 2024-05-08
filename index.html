@@ -23,7 +23,7 @@
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: #E6F7FB;
+    background-image: linear-gradient(to top, #B3CD63, #E6F7FB, #E6F7FB);
 }
 #conteiner{
   height: 100vh;
@@ -37,13 +37,14 @@
 }
 
 video {
-    border-radius: 20px;
+    border-radius: 30px;
     object-fit: cover;
     display: flex;
     justify-content: center;
     align-content: center;
     width: 100%;
     height: auto;
+    border: 3px solid transparent;
 }
 
 #square {
@@ -79,14 +80,14 @@ video {
 button {
     background-color: #104A52;
     color: #fff;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
     padding-left: 5px;
     padding-right: 5px;
     border: 3px solid #2D727D;
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), /* Sombra interna */
-        2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombra externa */
-    border-radius: 8px;
+        2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra externa */
+    border-radius: 20px;
     font-family: "M PLUS 1p", sans-serif;
     font-weight: bolder;
     font-size: 2.7rem;
@@ -94,10 +95,8 @@ button {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
     transition: background-color 0.3s;
-    width: calc(100% - 30px);
+    width: 100%;
   }
   
   button:hover {
