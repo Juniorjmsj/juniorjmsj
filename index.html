@@ -22,14 +22,16 @@ video {
 }
 
 #square {
-  background-color: black;
-  height: 500px;
-  width: 100%;
-  position: absolute;
-  top: 51vh;
-  left: 47vw;
-  border: solid 1px transparent;
-  z-index: 1;
+    background-color: transparent;
+    display: flex;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    border: solid 1px transparent;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 #square:hover {
@@ -43,7 +45,7 @@ video {
 }
 #presente{
   display: flex;
-  height: 80px;
+  height: 100%;
   width: 100%;
   justify-content: center;
 }
@@ -74,16 +76,6 @@ button {
 
 @media (max-width: 768px) {
 
-  #square {
-    display: flex;
-    position: absolute;
-    height: 500px;
-    width: 100%;
-    border: solid 1px transparent;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 </style>
 </head>
