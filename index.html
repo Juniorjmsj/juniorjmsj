@@ -7,19 +7,8 @@
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     overflow: hidden;
-    object-fit: cover;
     background-color: #E6F7FB;
-}
-
-.teste {
-    display: flex;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #F2E8D6;
-    justify-content: center;
 }
 
 video {
@@ -48,11 +37,10 @@ video {
   height: 100%;
 }
 #presente{
-  padding: 5px;
   display: flex;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
+  height: 80px;
+  width: 100%;
+  justify-content: center;
 }
 button {
     background-color: #D09F76;
@@ -68,7 +56,7 @@ button {
     margin-right: 5px;
     margin-left: 5px;
     transition: background-color 0.3s;
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
     height: 90%;
   }
   
@@ -79,16 +67,14 @@ button {
   }
 
 @media (max-width: 768px) {
-  .teste {
-  overflow: visible;
-  background-color: #E6F7FB;
-  }
+
   #square {
+    display: flex;
     position: absolute;
-    height: 300px;
+    height: 500px;
     width: 100%;
     border: solid 1px transparent;
-    top: 60%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -96,24 +82,21 @@ button {
 </style>
 </head>
 <body>
+      <div id="square">
+        <a href="https://maps.app.goo.gl/cbUhYL1ePUQ2rrRF7" target="_blank"></a>
+      </div>
 
-<div class="teste">
+      <div>
+        <video autoplay loop muted>
+          <source src="Convite aniversário infantil safari colorido ilustração verde marrom.mp4" type="video/mp4">Seu navegador não suporta a reprodução de vídeos.
+        </video>
+      </div>
 
- 
-
-  <div id="square">
-    <a href="https://maps.app.goo.gl/cbUhYL1ePUQ2rrRF7" target="_blank"></a>
-  </div>
-  <video autoplay loop muted>
-    <source src="Convite aniversário infantil safari colorido ilustração verde marrom.mp4" type="video/mp4">Seu navegador não suporta a reprodução de vídeos.
-  </video>
-</div>
-
- <div id="presente">
-  <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdxWuXwaKMu5gKdLbyQwxQKv-1XqoVl3Kmt8CY8cpmbYati9A/viewform?usp=sf_link', '_blank')">CLIQUE AQUI PARA CONFIRMAR PRESENÇA!</button>
-  </div>
-
+      <div id="presente">
+        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdxWuXwaKMu5gKdLbyQwxQKv-1XqoVl3Kmt8CY8cpmbYati9A/viewform?usp=sf_link', '_blank')">CLIQUE AQUI PARA CONFIRMAR PRESENÇA!</button>
+      </div>
 </body>
 </html>
+
 
 
