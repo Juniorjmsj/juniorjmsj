@@ -118,7 +118,7 @@ button {
           <a href="https://maps.app.goo.gl/cbUhYL1ePUQ2rrRF7" target="_blank"></a>
         </div>
         <div>
-          <video autoplay muted>
+          <video id="meuVideo" autoplay muted>
             <source src="Convite aniversário infantil safari colorido ilustração verde marrom.mp4" type="video/mp4">
             <source src="Convite-aniversário-infantil-safari-colorido-ilustração-verde-marrom.webm" type="video/webm">
             Seu navegador não suporta a reprodução de vídeos.
@@ -130,5 +130,25 @@ button {
         </div>
   </div>
 
+  <script>
+    function isiPhone() {
+        return /iPhone/i.test(navigator.userAgent);
+    }
+    
+    window.onload = function() {
+        if (isiPhone()) {
+            var video = document.getElementById("meuVideo");
+            video.removeAttribute("autoplay");
+            video.addEventListener("click", function() {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }
+    };
+    </script>
+  
 </body>
 </html>
