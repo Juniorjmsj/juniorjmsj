@@ -136,8 +136,13 @@ button {
   return /iPhone/i.test(navigator.userAgent);
 }
 
-if (isiPhone()) {
-  const video = document.getElementById("meuVideo"); // Substitua por seu ID do vídeo
+function isNotChrome() {
+  const userAgent = navigator.userAgent;
+  return !/chrome|chromium/i.test(userAgent);
+}
+
+if (isiPhone() || isNotChrome()) {
+  const video = document.getElementById("meuVideo"); // Substitua pelo ID correto do vídeo
   video.removeAttribute("autoplay");
   video.addEventListener("click", function() {
     if (video.paused) {
@@ -150,6 +155,7 @@ if (isiPhone()) {
 
 
     </script>
+
   
 </body>
 </html>
