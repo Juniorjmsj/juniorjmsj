@@ -130,24 +130,25 @@ button {
         </div>
   </div>
 
-  <script>
-    function isiPhone() {
-        return /iPhone/i.test(navigator.userAgent);
-    }
+  <script>
     
-    window.onload = function() {
-        if (isiPhone()) {
-            var video = document.getElementById("meuVideo");
-            video.removeAttribute("autoplay");
-            video.addEventListener("click", function() {
-                if (video.paused) {
-                    video.play();
-                } else {
-                    video.pause();
-                }
-            });
-        }
-    };
+    function isiPhone() {
+  return /iPhone/i.test(navigator.userAgent);
+}
+
+if (isiPhone()) {
+  const video = document.getElementById("meuVideo"); // Substitua por seu ID do vídeo
+  video.removeAttribute("autoplay");
+  video.addEventListener("click", function() {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+}
+
+
     </script>
   
 </body>
