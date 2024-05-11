@@ -106,6 +106,28 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
+#playButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15em;
+      height: 15em;
+      z-index: 10;
+      cursor: pointer;
+      color: #3A7A55;
+      padding: none;
+      border: solid 2px #03210f;
+      border-radius: 500px;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+      font-size:  4em;
+      display: none;
+      background-image: linear-gradient(to top, #B3CD63, #E6F7FB, #E6F7FB);
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), /* Sombra interna */
+        2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra externa */
+    }
+
 @media (max-width: 768px) {
 
 }
@@ -114,6 +136,7 @@ button {
 <body>
   
   <div id="conteiner">
+    <button id="playButton">Play</button>
         <div id="square">
           <a href="https://maps.app.goo.gl/cbUhYL1ePUQ2rrRF7" target="_blank"></a>
         </div>
@@ -130,7 +153,7 @@ button {
         </div>
   </div>
 
-  <script>
+  <script>
     
     function isiPhone() {
   return /iPhone/i.test(navigator.userAgent);
@@ -142,9 +165,12 @@ function isNotChrome() {
 }
 
 if (isiPhone() || isNotChrome()) {
-  const video = document.getElementById("meuVideo"); // Substitua pelo ID correto do vídeo
+  const playButton = document.getElementById('playButton');
+  playButton.style.display= "block";
+  const video = document.getElementById("meuVideo");
   video.removeAttribute("autoplay");
-  video.addEventListener("click", function() {
+  playButton.addEventListener("click", function() {
+  playButton.style.display= "none";
     if (video.paused) {
       video.play();
     } else {
